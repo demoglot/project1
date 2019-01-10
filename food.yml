@@ -2,3 +2,6 @@
 - hosts: web
   roles:
     - httpd
+  tasks:
+    - name: download html code
+      git: repo=https://github.com/demoglot/html-samples-food.git dest=/var/www/html
